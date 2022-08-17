@@ -1,16 +1,17 @@
 {
-  "name": "gulp-sample",
-  "version": "1.3.1",
+  "name": "gulp-pug-template",
+  "version": "1.0",
   "description": "Web サイト、LP 制作等のローカル開発環境のSampleテンプレートです。",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "img": "npx gulp image"
   },
   "browserslist": [
     "defaults"
   ],
   "keywords": [],
-  "author": "maashi",
+  "author": "kinshist",
   "license": "Apache-2.0",
   "devDependencies": {
     "autoprefixer": "^10.4.0",
@@ -29,6 +30,7 @@
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-sass-glob-use-forward": "^0.1.3",
+    "gulp-webp": "^4.0.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "path": "^0.12.7",

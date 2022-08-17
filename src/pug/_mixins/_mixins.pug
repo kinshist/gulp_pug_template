@@ -1,0 +1,24 @@
+//- webp対応画像を生成するmixin
+//- image_pathで画像ディレクトリまでのパスを取得しているため、`/dev/assets/img/` 配下のpathをsrcに書く
+//- Sample
+  +image({
+    pc:{
+      src: "/dress-in-autumn/img_hero.jpg",
+      width: "700",
+      height: "300"
+    },
+    sp:{
+      src: "/dress-in-autumn/img_hero_sp.jpg",
+      width: "700",
+      height: "300"
+    }
+    alt: "test"
+  })
+mixin image(data)
+  picture(class= data.fade ? "js-fadeIn" : "")
+    if data.sp
+      source(srcset=image_path + data.pc.src media='(min-width: 768px)', width=data.pc.width, height=data.pc.height)
+      img(src=image_path + data.sp.src, width=data.sp.width, height=data.sp.height, loading="lazy", alt=data.alt)
+    else
+      source(srcset=image_path + data.pc.src, width=data.pc.width, height=data.pc.height)
+      img(src=image_path + data.pc.src, width=data.pc.width, height=data.pc.height, loading="lazy", alt=data.alt)

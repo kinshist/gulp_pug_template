@@ -19,6 +19,7 @@ const stylelint = require('stylelint')
 const imagemin = require('gulp-imagemin')
 const imageminMozjpeg = require('imagemin-mozjpeg')
 const imageminPngquant = require('imagemin-pngquant')
+const webp = require('gulp-webp')
 
 // Local server
 const browserSync = require('browser-sync')
@@ -208,6 +209,8 @@ function image() {
         imagemin.gifsicle(),
       ])
     )
+    .pipe(gulp.dest(dest))
+    .pipe(webp())
     .pipe(gulp.dest(dest))
     .pipe(browserSync.reload({ stream: true }))
 }
