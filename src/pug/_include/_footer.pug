@@ -1,1 +1,32 @@
-footer フッター
+footer.l-footer
+  .l-footer__inner
+    .l-footerNav
+      dl.l-footerNav__dl.-category
+        dt.l-footerNav__title カテゴリ
+        dd.l-footerNav__contents
+          ul.l-footerNav__list
+            li
+              a(href="/list/") あしまいコラム
+            li
+              a(href="/list/") お洒落ビト目撃ブログ
+      dl.l-footerNav__dl.-tag
+        dt.l-footerNav__title タグ
+        dd.l-footerNav__contents
+          .l-footerNav__tags
+            a(href="/list/").c-tag あたま
+            a(href="/list/").c-tag あたま
+            a(href="/list/").c-tag あたま
+            a(href="/list/").c-tag あたま
+
+    .l-footer__logo
+      a(href="https://ashimai.jp/", target="_blank")
+        img(src="/assets/images/logo-ashimai.svg",alt="ashimai illustration",loading="lazy")
+    ul.l-footerSns
+      li.l-footerSns__item
+        a(href='https://www.instagram.com/_ashimai_/' target='_blank')
+          i.lab.la-instagram
+      li.l-footerSns__item
+        a(href='https://twitter.com/_ashimai_' target='_blank')
+          i.lab.la-twitter
+      // <li class="l-footer__snsItem"><a href="https://note.mu/ashimai" target="_blank"><span class="icon-note"></span></a></li>
+    p.l-footer__copyright © ashimai All Rights Reserved.

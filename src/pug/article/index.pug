@@ -1,0 +1,111 @@
+extends /_include/_layout
+block variables
+  - var key ='isList'
+block css
+block js
+
+
+block body
+  main.l-main
+
+    .l-section
+      .l-sectionInner
+        .c-breadcrumbs
+          li
+            a(href="/") TOP
+          li
+            a(href="/list/") お洒落ビト目撃ブログ
+            i.las.la-angle-right
+          li
+            | 最近のあたまと服｜内側ピンク
+            i.las.la-angle-right
+
+        .l-contentHeader
+          .p-homeKeyvisual
+            +imageWebp({
+              sp:{
+                src: "sample",
+                width: "1000",
+                height: "480"
+              },
+              imgType: "png",
+              fade: false,
+              alt: ""
+            })
+
+        .c-titleType1.u-mt-32 最近のあたまと服｜内側ピンク
+        .l-articleInfo
+          .l-articleTags
+            .c-tag あたま
+            .c-tag あしまいコラム
+          .l-articleDate 2022/07/22
+
+        .l-article
+          p 前回の顔まわりの内側オレンジ部分が伸びて色も褪せてきたので、今度はピンクにしてみました。
+          p ガチピンクというよりは、ピンクグレープフルーツの果肉みたいな、オレンジみも感じられるピンクです。<br>シンプルなTシャツスタイルに、バレッタでガバッとインナーカラーを見せてピアスやイヤリングとの組み合わせを楽しんでも良いし、ただ結ぶだけでも良い感じのニュアンスが出る。
+          p 外出が減り、めかし甲斐が無くなったからなのか、自分の姿に飽きてくるんですよね…顔まわりに色があるだけで、鏡を見る度ちょっとご機嫌。<br>ネイルすると手元を見るたびに嬉しくなる感覚と似ているかもしれん。
+          p キンメTは沼津のサービスエリアで衝動買いしちゃった〜！伊豆にしかないのかしら？謎。
+          p 美容室はいつものUNE ATTACHEです。<br>何人かあしまいコラム経由でサロンに行って下さった方がいると聞いて嬉しくなりました。<br>情報が少ないので勇気がいったことでしょう…笑（そ、そこが良いところなのよ？SNS用にスタイル写真撮らせてとか言われないし、自分以外お客さんはいないし、ほんとプライベートサロン）
+
+
+
+
+    .l-section.-bgGray
+      .l-sectionInner
+        .c-titleType1 ピックアップ
+        .p-homeNewCard.u-mt-32
+          a.c-card(href='/article/')
+            .c-card__image
+              +imageWebp({
+                sp:{
+                  src: "sample",
+                  width: "620",
+                  height: "383"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+              p.c-card__category お洒落ビト目撃ブログ
+            p.c-card__date 2022/07/22
+            p.c-card__text 「 リモート会議部屋 兼 何かに感染したら隔離生活もできる部屋 」を作った
+            .c-card__tag
+              .c-tag あたま
+              .c-tag あしまいコラム
+          a.c-card(href='/article/')
+            .c-card__image
+              +imageWebp({
+                sp:{
+                  src: "sample",
+                  width: "620",
+                  height: "383"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+              p.c-card__category お洒落ビト目撃ブログ
+            p.c-card__date 2022/07/22
+            p.c-card__text 「 リモート会議部屋 兼 何かに感染したら隔離生活もできる部屋 」を作った
+            .c-card__tag
+              .c-tag あたま
+              .c-tag あしまいコラム
+          a.c-card(href='/article/')
+            .c-card__image
+              +imageWebp({
+                sp:{
+                  src: "sample",
+                  width: "620",
+                  height: "383"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+              p.c-card__category あしまいコラム
+            p.c-card__date 2022/07/22
+            p.c-card__text 「 リモート会議部屋 兼 何かに感染したら隔離生活もできる部屋 」を作った
+            .c-card__tag
+              .c-tag あたま
+              .c-tag あしまいコラム
+

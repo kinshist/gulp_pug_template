@@ -1,0 +1,9 @@
+@use '../_foundation/mixin' as *;
+
+.c-titleType1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  @include mq(md) {
+    font-size: 3rem;
+  }
+}

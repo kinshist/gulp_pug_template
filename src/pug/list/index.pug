@@ -1,0 +1,52 @@
+extends /_include/_layout
+block variables
+  - var key ='isList'
+block css
+block js
+
+
+block body
+  main.l-main
+
+    .l-section
+      .l-sectionInner
+        .c-breadcrumbs
+          li
+            a(href="/") TOP
+          li
+            | お洒落ビト目撃ブログ
+            i.las.la-angle-right
+
+        .l-contentHeader
+          .p-homeKeyvisual
+            +imageWebp({
+              sp:{
+                src: "img-blog",
+                width: "1000",
+                height: "480"
+              },
+              imgType: "png",
+              fade: false,
+              alt: ""
+            })
+
+        .c-gridType1.u-mt-32
+          -for (var n = 1; n <= 5; n++)
+            a.c-card(href='/article/')
+              .c-card__image
+                +imageWebp({
+                  sp:{
+                    src: "sample",
+                    width: "620",
+                    height: "383"
+                  },
+                  imgType: "png",
+                  fade: false,
+                  alt: ""
+                })
+                p.c-card__category お洒落ビト目撃ブログ
+              p.c-card__date 2022/07/22
+              p.c-card__text 「 リモート会議部屋 兼 何かに感染したら隔離生活もできる部屋 」を作った
+              .c-card__tag
+                .c-tag あたま
+                .c-tag あしまいコラム

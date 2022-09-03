@@ -1,5 +1,5 @@
-if site[directory].ogp
-  - var ogp= site[directory].ogp;
+if site[key].ogp
+  - var ogp= site[key].ogp;
 else
   - var ogp= site.siteImage;
 
@@ -9,39 +9,41 @@ meta(name='viewport', content=site.viewport)
 meta(name='robots', content='index,follow')
 meta(name='format-detection', content='telephone=no')
 
-if site[directory].keywords
-  meta(name='keywords', content=site[directory].keywords)
+if site[key].keywords
+  meta(name='keywords', content=site[key].keywords)
 else if site.keywords
   meta(name='keywords', content=site.keywords)
 
-meta(name='description', content=site[directory].description)
+meta(name='description', content=site[key].description)
 
 if site.twitterSite
   meta(name='twitter:site', content=site.twitterSite)
 
 meta(name='twitter:card', content=site.twitterCard)
 meta(name='twitter:image', content=site.url + ogp)
-meta(name='twitter:url', content=site.url + directory)
-meta(name='twitter:description', content=site[directory].description)
-meta(name='twitter:title', content=site[directory].name)
+meta(name='twitter:url', content=site.url + site[key].directory)
+meta(name='twitter:description', content=site[key].description)
+meta(name='twitter:title', content=site[key].name)
 
 if site.fbAppId
   meta(property="fb:app_id" content=site.fbAppId)
 else if site.fbAdmins
   meta(property="fb:admins" content=site.fbAdmins)
 
-meta(property='og:description', content=site[directory].description)
+meta(property='og:description', content=site[key].description)
 meta(property='og:site_name', content=site.name)
 meta(property='og:locale', content=site.locale)
 meta(property='og:type', content=type)
 meta(property='og:image', content=site.url + ogp)
-meta(property='og:url', content=site.url + directory)
-meta(property='og:title', content=site[directory].name)
-title #{site[directory].name}
+meta(property='og:url', content=site.url + site[key].directory)
+meta(property='og:title', content=site[key].name)
+title #{site[key].name}
 link(rel='shortcut icon', href='/favicon.ico')
 link(rel='apple-touch-icon', href='/apple-touch-icon.png')
 
-if site[directory].canonical
-  link(rel='canonical', href=site[directory].canonical)
-if site[directory].alternate
-  link(rel='alternate', href=site[directory].alternate, media='only screen and (max-width: 640px)')
+if site[key].canonical
+  link(rel='canonical', href=site[key].canonical)
+if site[key].alternate
+  link(rel='alternate', href=site[key].alternate, media='only screen and (max-width: 640px)')
+
+

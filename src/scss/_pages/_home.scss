@@ -1,0 +1,32 @@
+@use '../_foundation/mixin' as *;
+
+.p-homeKeyvisual {
+  padding-top: 30px;
+  background-color: var(--color-main);
+  text-align: center;
+  img{
+    max-width: 100%;
+  }
+}
+
+.p-homeBanner {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  // grid-template-columns: 2fr repeat(auto-fill,1fr);
+  // .c-card{
+  //   &:first-child{
+  //     grid-row: span 2; grid-column: span 2;
+  //   }
+  // }
+  // @include mq(md) {
+  //   grid-template-columns: repeat(auto-fill,minmax(512px,1fr));
+  // }
+}
+
+
+.p-homeNewCard {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
+}

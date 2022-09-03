@@ -4,6 +4,9 @@ if directory == '/'
   - var type= 'website';
 else
   - var type= 'article';
+block variables
+
+include ../_mixins/_mixins.pug
 
 doctype
 html(lang=site.lang)
@@ -13,10 +16,12 @@ html(lang=site.lang)
     block css
     include /_include/_js
     block js
-  body
-    include /_include/_header
+  body(class=key)
+    .l-container
+      include /_include/_header
 
-    block body
+      block body
 
-    include /_include/_footer
+      include /_include/_footer
+      include /_include/_nav
 

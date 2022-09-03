@@ -37,6 +37,7 @@ const changed = require('gulp-changed')
 
 // 公開用ディレクトリ
 const dest = 'dist/'
+const destWpTheme = '../app/public/wp/wp-content/themes/ashimai-magazine/'
 
 // 開発用ディレクトリ
 const src = {
@@ -56,8 +57,8 @@ const src = {
     watch: 'src/**/*.ts',
   },
   img: {
-    file: 'src/img/**/*.{png,jpg,gif,svg,ico}',
-    watch: 'src/img/**/*',
+    file: 'src/images/**/*.{webp,png,jpg,gif,svg,ico}',
+    watch: 'src/images/**/*',
   },
   public: {
     file: 'src/public/**/*',
@@ -100,6 +101,7 @@ const pugFunc = (isAll) => {
         })
       )
       .pipe(gulp.dest(dest))
+      .pipe(gulp.dest(destWpTheme))
   )
 }
 
@@ -139,6 +141,7 @@ function sass() {
     )
     .pipe(postcss([cmq(), autoprefixer()]))
     .pipe(gulp.dest(dest))
+    .pipe(gulp.dest(destWpTheme))
     .pipe(browserSync.reload({ stream: true }))
 }
 exports.sass = sass
@@ -159,6 +162,7 @@ function js() {
     )
     .pipe(webpackStream(webpackConfig, webpack))
     .pipe(gulp.dest(dest))
+    .pipe(gulp.dest(destWpTheme))
     .pipe(browserSync.reload({ stream: true }))
 }
 exports.js = js
@@ -210,8 +214,10 @@ function image() {
       ])
     )
     .pipe(gulp.dest(dest))
+    .pipe(gulp.dest(destWpTheme))
     .pipe(webp())
     .pipe(gulp.dest(dest))
+    .pipe(gulp.dest(destWpTheme))
     .pipe(browserSync.reload({ stream: true }))
 }
 exports.image = image

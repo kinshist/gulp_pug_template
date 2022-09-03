@@ -1,0 +1,51 @@
+@use '../_foundation/mixin' as *;
+
+.l-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-gray-400);
+  &__inner{
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+  &__title{
+    width: 194px;
+  }
+  &__nav{
+    font-size: 3rem;
+    cursor: pointer;
+  }
+}
+
+.isHome .l-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-bottom: none;
+  &__inner{
+    max-width: 2000px;
+  }
+  &__title{
+    width: 194px;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1999px;
+      width: 2000px;
+      height: 22px;
+      background-color: #151515;
+    }
+  }
+}

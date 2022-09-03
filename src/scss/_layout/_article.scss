@@ -1,0 +1,61 @@
+@use '../_foundation/mixin' as *;
+
+.l-article {
+  font-size: 1.6rem;
+  p {
+    margin-top: 32px;
+    line-height: 2;
+
+  }
+  .wp-block-media-text{
+    margin-top: 32px;
+    display: grid;
+    gap: 32px;
+    .wp-block-media-text__content{
+      grid-area: content;
+      >p:first-child{
+        margin-top: 0;
+      }
+    }
+    .wp-block-media-text__media{
+      grid-area: media;
+    }
+    &.is-stacked-on-mobile{
+      grid-template-areas: "content" "media";
+    }
+    &.is-stacked-on-mobile.has-media-on-the-right{
+      grid-template-areas: "media" "content";
+    }
+  }
+  @include mq(md) {
+    .wp-block-media-text{
+      grid-template-areas: "media content";
+      &.is-stacked-on-mobile{
+        grid-template-areas: "media content";
+      }
+      &.has-media-on-the-right,
+      &.is-stacked-on-mobile.has-media-on-the-right{
+        grid-template-areas: "content media";
+      }
+    }
+  }
+}
+
+.l-articleDate{
+  font-size: 1.4rem;
+  padding-left: 16px;
+  white-space: nowrap;
+}
+
+.l-articleTags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.l-articleInfo{
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin-top: 16px;
+}

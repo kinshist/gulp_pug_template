@@ -1,5 +1,5 @@
 //- webp対応画像を生成するmixin
-//- image_pathで画像ディレクトリまでのパスを取得しているため、`/dev/assets/img/` 配下のpathをsrcに書く
+//- site.imagePathで画像ディレクトリまでのパスを取得しているため、`/dev/assets/img/` 配下のpathをsrcに書く
 //- Sample
   +image({
     pc:{
@@ -11,14 +11,45 @@
       src: "/dress-in-autumn/img_hero_sp.jpg",
       width: "700",
       height: "300"
-    }
-    alt: "test"
+    },
+    alt: "test",
+    fade: false
   })
 mixin image(data)
   picture(class= data.fade ? "js-fadeIn" : "")
     if data.sp
-      source(srcset=image_path + data.pc.src media='(min-width: 768px)', width=data.pc.width, height=data.pc.height)
-      img(src=image_path + data.sp.src, width=data.sp.width, height=data.sp.height, loading="lazy", alt=data.alt)
+      source(srcset=site.imagePath + data.pc.src media='(min-width: 768px)', width=data.pc.width, height=data.pc.height)
+      img(src=site.imagePath + data.sp.src, width=data.sp.width, height=data.sp.height, loading="lazy", alt=data.alt)
     else
-      source(srcset=image_path + data.pc.src, width=data.pc.width, height=data.pc.height)
-      img(src=image_path + data.pc.src, width=data.pc.width, height=data.pc.height, loading="lazy", alt=data.alt)
+      source(srcset=site.imagePath + data.pc.src, width=data.pc.width, height=data.pc.height)
+      img(src=site.imagePath + data.pc.src, width=data.pc.width, height=data.pc.height, loading="lazy", alt=data.alt)
+
+//- webp対応画像を生成するmixin
+//- site.imagePathで画像ディレクトリまでのパスを取得しているため、`/dev/assets/img/` 配下のpathをsrcに書く
+//- Sample
+  +image({
+    pc:{
+      src: "/dress-in-autumn/img_hero.jpg",
+      srcWebp: "/dress-in-autumn/img_hero.webp",
+      width: "700",
+      height: "300"
+    },
+    sp:{
+      src: "/dress-in-autumn/img_hero_sp.jpg",
+      srcWebp: "/dress-in-autumn/img_hero_sp.webp",
+      width: "700",
+      height: "300"
+    },
+    alt: "test",
+    fade: false
+  })
+mixin imageWebp(data)
+  picture(class= data.fade ? "js-fadeIn" : "")
+    if data.pc
+      source(srcset=site.imagePath + data.pc.src + '.webp', media='(min-width: 768px)', width=data.pc.width, height=data.pc.height, type="image/webp")
+      source(srcset=site.imagePath + data.pc.src + '.' + data.imgType, media='(min-width: 768px)', width=data.pc.width, height=data.pc.height)
+      source(srcset=site.imagePath + data.sp.src + '.webp', width=data.sp.width, height=data.sp.height, type="image/webp")
+      img(src=site.imagePath + data.sp.src + '.' + data.imgType, width=data.sp.width, height=data.sp.height, loading="lazy", alt=data.alt)
+    else
+      source(srcset=site.imagePath + data.sp.src + '.webp', width=data.sp.width, height=data.sp.height, type="image/webp")
+      img(src=site.imagePath + data.sp.src + '.' + data.imgType, width=data.sp.width, height=data.sp.height, loading="lazy", alt=data.alt)

@@ -1,0 +1,98 @@
+@use '../_foundation/mixin' as *;
+
+.l-footer {
+  grid-area: footer;
+  border-top: 1px solid var(--color-gray-400);
+  background-color: var(--color-gray-800);
+  color: #fff;
+  &__inner{
+    display: grid;
+    column-gap: 40px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "nav nav"
+      "logo sns"
+      "copyright copyright";
+  }
+  &__logo{
+    grid-area: logo;
+    padding: 40px 0;
+    img{
+      margin-left: auto;
+      display: block;
+      width: 110px;
+    }
+  }
+  &__copyright{
+    grid-area: copyright;
+    text-align: center;
+    padding: 16px;
+    font-size: 1.3rem;
+  }
+  @include mq(md) {
+    &__inner{
+      grid-template-columns: 200px 200px;
+    }
+  }
+}
+
+.l-footerSns{
+  grid-area: sns;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  &__item{
+    font-size: 3.6rem;
+  }
+  a{
+    color: #fff;
+  }
+}
+
+.l-footerNav{
+  grid-area: nav;
+  padding: 40px 16px 24px;
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "category tag";
+  &__dl{
+    &.-tag{
+      grid-area: tag;
+    }
+    &.-category{
+      grid-area: category;
+    }
+  }
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  &__contents{
+    padding-top: 8px;
+    font-size: 1.3rem;
+  }
+  &__list {
+    li + li{
+      margin-top: 4px;
+    }
+  }
+  &__tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    .c-tag {
+      background: transparent;
+      font-size: 1.2rem;
+      border: #fff 1px solid;
+    }
+  }
+  a{
+    color: #fff;
+  }
+  @include mq(md) {
+    padding: 64px 64px 32px;
+  }
+}

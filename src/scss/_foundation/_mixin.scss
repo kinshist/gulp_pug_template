@@ -25,3 +25,10 @@ $breakpoint-down: (
     @content;
   }
 }
+
+@mixin useHover() {
+  //hover要素が効く端末に適用
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

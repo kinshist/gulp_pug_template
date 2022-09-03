@@ -2,6 +2,7 @@
 html {
   font-size: var(--font-size);
   font-family: var(--font-gothic);
+  color: var(--color-gray-700);
   // デバイスの向きによって文字サイズが変更されないようにする
   -webkit-text-size-adjust: 100%;
 
@@ -15,4 +16,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
 
   font-feature-settings: "pkna";
+  &.-fixed{
+    position: fixed;
+  }
+}
+
+*:where(a){
+  color: var(--color-gray-700);
+  text-decoration: none;
 }

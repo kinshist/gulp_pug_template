@@ -1,0 +1,18 @@
+@use '../_foundation/mixin' as *;
+.l-side {
+  grid-area: side;
+}
+.l-sideItem {
+  background-color: #fff;
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+  &__title{
+    font-weight: bold;
+  }
+  &__content{
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+}

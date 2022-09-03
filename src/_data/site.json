@@ -1,6 +1,6 @@
 {
-  "url": "https://example.com",
-  "name": "サイト名",
+  "url": "https://magazine.ashimai.jp",
+  "name": "ashimai magazine",
   "viewport": "width=device-width",
   "description": "サイトの概要",
   "keywords": "",
@@ -11,9 +11,29 @@
   "fbAdmins": "",
   "twitterCard": "summary_large_image",
   "twitterSite": "",
-  "/": {
+  "imagePath": "/assets/images/",
+  "isHome": {
+    "directory": "/",
     "name": "トップページ",
     "description": "トップページの概要",
+    "keywords": "",
+    "ogp": "",
+    "canonical": "",
+    "alternate": ""
+  },
+  "isList": {
+    "directory": "/list/",
+    "name": "一覧",
+    "description": "一覧の概要",
+    "keywords": "",
+    "ogp": "",
+    "canonical": "",
+    "alternate": ""
+  },
+  "isArticle": {
+    "directory": "/article/",
+    "name": "詳細",
+    "description": "詳細の概要",
     "keywords": "",
     "ogp": "",
     "canonical": "",

@@ -1,0 +1,220 @@
+@use '../_foundation/mixin' as *;
+
+/*--------------------------------------
+  Utility Styles
+---------------------------------------*/
+
+// 行揃え
+.u-ta-left   { text-align: left; }
+.u-ta-center { text-align: center; }
+.u-ta-right  { text-align: right; }
+
+// 要素タイプ
+.u-d-bl { display: block; }
+.u-d-ib { display: inline-block; }
+.u-d-in { display: inline; }
+.u-d-n {display: none;}
+
+
+// 文字色
+// blue
+// .u-color-blue-d-xs { color:$color-blue-d}
+// .u-color-blue-m-xs { color:$color-blue-m}
+// .u-color-blue-l-xs { color:$color-blue-l}
+
+// pink
+// .u-color-pink-d-xs { color:$color-pink-d}
+// .u-color-pink-m-xs { color:$color-pink-m}
+// .u-color-pink-l-xs { color:$color-pink-l}
+
+// orange
+// .u-color-orange-d-xs { color:$color-orange-d}
+// .u-color-orange-l-xs { color:$color-orange-l}
+
+// darkBrown
+// .u-color-darkBrown-d-xs { color:$color-darkBrown-d}
+// .u-color-darkBrown-l-xs { color:$color-darkBrown-l}
+
+// black
+// .u-color-black-d-xs { color:$color-black-d}
+
+// red
+// .u-color-red-d-xs { color:$color-red-d}
+
+
+//文字装飾
+.u-fw-b{font-weight: bold;}
+.u-fw-n{font-weight: normal;}
+.u-td-u{text-decoration: underline;}
+
+
+
+//マーカー
+// .u-marker-yellow-xs{
+//   background:linear-gradient(to top, $color-yellow-d 0%, $color-yellow-d 19%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 100%);
+// }
+
+//ボーダー
+// .u-bdb-blue-m-xs{
+//   border-bottom: $color-blue-m 1px solid;
+// }
+
+
+
+//文字サイズ
+@for $i from 10 through 24 {
+  .u-fz-#{$i}rem {
+    font-size:#{$i * 0.1}rem;
+  }
+}
+@for $i from 10 through 24 {
+  .u-lh-#{$i} {
+    line-height:#{$i * 0.1};
+  }
+}
+
+
+
+//パディング
+// @for $i from 0 through 20 {
+//   .u-pb-#{$i * 8}-xs {
+//     padding-bottom:#{$i * 8}px;
+//   }
+// }
+// @for $i from 0 through 20 {
+//   .u-pr-#{$i * 8}-xs {
+//     padding-right:#{$i * 8}px;
+//   }
+// }
+// @for $i from 0 through 20 {
+//   .u-pl-#{$i * 8}-xs {
+//     padding-left:#{$i * 8}px;
+//   }
+// }
+// @for $i from 0 through 20 {
+//   .u-pt-#{$i * 8}-xs {
+//     padding-top:#{$i * 8}px;
+//   }
+// }
+
+
+//マージン
+.u-mr-a{
+  margin-right: auto;
+}
+.u-ml-a{
+  margin-left: auto;
+}
+@for $i from 0 through 20 {
+  .u-mb-#{$i * 8} {
+    margin-bottom:#{$i * 8}px;
+  }
+}
+@for $i from 0 through 20 {
+  .u-mr-#{$i * 8} {
+    margin-right:#{$i * 8}px;
+  }
+}
+@for $i from 0 through 20 {
+  .u-ml-#{$i * 8} {
+    margin-left:#{$i * 8}px;
+  }
+}
+@for $i from 0 through 20 {
+  .u-mt-#{$i * 8} {
+    margin-top:#{$i * 8}px;
+  }
+}
+
+
+
+
+@include mq(md) {
+
+  .u-ta-left-md   { text-align: left; }
+  .u-ta-center-md { text-align: center; }
+  .u-ta-right-md  { text-align: right; }
+
+  //文字サイズ
+  @for $i from 10 through 24 {
+    .u-fz-#{$i}rem-md {
+      font-size:#{$i * 0.1}rem;
+    }
+  }
+
+  //パディング
+  @for $i from 0 through 20 {
+    .u-pb-#{$i * 8}-md {
+      padding-bottom:#{$i * 8}px;
+    }
+  }
+  @for $i from 0 through 20 {
+    .u-pr-#{$i * 8}-md {
+      padding-right:#{$i * 8}px;
+    }
+  }
+  @for $i from 0 through 20 {
+    .u-pl-#{$i * 8}-md {
+      padding-left:#{$i * 8}px;
+    }
+  }
+  @for $i from 0 through 20 {
+    .u-pt-#{$i * 8}-md {
+      padding-top:#{$i * 8}px;
+    }
+  }
+
+
+  //マージン
+  .u-mr-a-md{
+    margin-right: auto;
+  }
+  .u-ml-a-md{
+    margin-left: auto;
+  }
+  @for $i from 0 through 20 {
+    .u-mb-#{$i * 8}-md {
+      margin-bottom:#{$i * 8}px;
+    }
+  }
+  @for $i from 0 through 20 {
+    .u-mr-#{$i * 8}-md {
+      margin-right:#{$i * 8}px;
+    }
+  }
+  @for $i from 0 through 20 {
+    .u-ml-#{$i * 8}-md {
+      margin-left:#{$i * 8}px;
+    }
+  }
+  @for $i from 0 through 20 {
+    .u-mt-#{$i * 8}-md {
+      margin-top:#{$i * 8}px;
+    }
+  }
+
+
+}
+
+
+
+
+
+// @include mq(xsMax) {
+//     .u-hidden-u-sm { display: none; }
+// }
+// @include mq(smMax) {
+//     .u-hidden-u-md { display: none; }
+// }
+// @include mq(mdMax) {
+//     .u-hidden-u-lg { display: none; }
+// }
+@include mq(sm) {
+    .u-hidden-o-sm { display: none; }
+}
+@include mq(md) {
+    .u-hidden-o-md { display: none; }
+}
+@include mq(lg) {
+    .u-hidden-o-lg { display: none; }
+}

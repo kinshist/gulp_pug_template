@@ -1,7 +1,12 @@
 // custom properties
 :root {
   // Site color
-  --color-main: red;
+  --color-main: #e3dbc7;
+  --color-gray-400: #f1f0ed;
+  --color-gray-500: #ccc;
+  --color-gray-600: #666;
+  --color-gray-700: #333;
+  --color-gray-800: #111;
 
   // Base font-family
   --font-gothic: 'Helvetica Neue', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
@@ -9,4 +14,6 @@
 
   // Base font-size ％で指定するとブラウザ設定のフォントサイズ切り替えに対応できる
   --font-size: 62.5%;
+
+  --max-width: 1056px;
 }

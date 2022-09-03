@@ -1,1 +1,16 @@
-header ヘッダー
+block variables
+
+if directory == '/'
+  - var type= 'isHome';
+
+header.l-header
+  .l-header__inner
+    if type === 'isHome'
+      h1.l-header__title
+        img(src=site.imagePath + 'logo.webp' width='194' height='59' alt='ashimai magazine')
+    else
+      p.l-header__title
+        img(src=site.imagePath + 'logo.webp' width='194' height='59' alt='ashimai magazine')
+
+    .l-header__nav.js-nav
+      i.las.la-bars

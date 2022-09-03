@@ -1,11 +1,118 @@
 extends /_include/_layout
-append variables
-  - var directory ='/'
+block variables
+  - var key ='isHome'
 block css
 block js
 
+
 block body
-  main
-    h1 タスクランナー
-    p Hello World!
-    p: img(src="/assets/img/sample.png", alt="")
+  main.l-main
+    .l-contentHeader
+      .p-homeKeyvisual
+        +imageWebp({
+          pc:{
+            src: "main-01-pc",
+            width: "1000",
+            height: "480"
+          },
+          sp:{
+            src: "main-01",
+            width: "375",
+            height: "500"
+          },
+          imgType: "png",
+          fade: false,
+          alt: ""
+        })
+
+    .l-section
+      .l-sectionInner
+        .p-homeBanner
+          a.c-banner(href='/list/')
+            .c-banner__image
+              +imageWebp({
+                sp:{
+                  src: "img-column",
+                  width: "520",
+                  height: "196"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+            p.c-banner__title あしまいコラム
+            p.c-banner__text 最近の服、ヘアスタイル、愛用品、イラスト作品など
+          a.c-banner(href='/list/')
+            .c-banner__image
+              +imageWebp({
+                sp:{
+                  src: "img-blog",
+                  width: "520",
+                  height: "196"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+            p.c-banner__title お洒落ビト目撃ブログ
+            p.c-banner__text 街で実際に見かけたお洒落な人のファッションをイラストで解説しています。
+
+
+    .l-section.-bgGray
+      .l-sectionInner
+        .p-homeNewCard
+          a.c-card(href='/article/')
+            .c-card__image
+              +imageWebp({
+                sp:{
+                  src: "sample",
+                  width: "620",
+                  height: "383"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+              p.c-card__category お洒落ビト目撃ブログ
+            p.c-card__date 2022/07/22
+            p.c-card__text 「 リモート会議部屋 兼 何かに感染したら隔離生活もできる部屋 」を作った
+            .c-card__tag
+              .c-tag あたま
+              .c-tag あしまいコラム
+          a.c-card(href='/article/')
+            .c-card__image
+              +imageWebp({
+                sp:{
+                  src: "sample",
+                  width: "620",
+                  height: "383"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+              p.c-card__category お洒落ビト目撃ブログ
+            p.c-card__date 2022/07/22
+            p.c-card__text 「 リモート会議部屋 兼 何かに感染したら隔離生活もできる部屋 」を作った
+            .c-card__tag
+              .c-tag あたま
+              .c-tag あしまいコラム
+          a.c-card(href='/article/')
+            .c-card__image
+              +imageWebp({
+                sp:{
+                  src: "sample",
+                  width: "620",
+                  height: "383"
+                },
+                imgType: "png",
+                fade: false,
+                alt: ""
+              })
+              p.c-card__category あしまいコラム
+            p.c-card__date 2022/07/22
+            p.c-card__text 「 リモート会議部屋 兼 何かに感染したら隔離生活もできる部屋 」を作った
+            .c-card__tag
+              .c-tag あたま
+              .c-tag あしまいコラム
+

@@ -1,0 +1,23 @@
+@use '../_foundation/mixin' as *;
+
+.l-content {
+  grid-area: content;
+  @include mq(md) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--max-width);
+    // display: grid;
+    // justify-content: center;
+    // grid-template-columns: minmax(688px,1024px);
+    // gap: 16px;
+    // grid-template-columns: minmax(520px,688px) minmax(200px,320px);
+    // grid-template-areas:
+    // "main side";
+  }
+}
+.l-contentKeyvisual{
+  text-align: center;
+  img{
+    max-width: 100%;
+  }
+}

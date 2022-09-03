@@ -1,0 +1,20 @@
+@use '../_foundation/mixin' as *;
+
+.c-breadcrumbs {
+  padding: 16px 0;
+  li {
+    display: inline-block;
+    position: relative;
+    &:not(:last-child){
+      padding-right: 16px;
+    }
+  }
+  i{
+    position: absolute;
+    top: 2px;
+    left: -15px;
+  }
+  a{
+    text-decoration: underline;
+  }
+}

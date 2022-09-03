@@ -1,0 +1,10 @@
+@use '../_foundation/mixin' as *;
+
+.c-tag {
+  background-color: var(--color-gray-400);
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 5px 8px 4px;
+  color: var(--color-gray-700);
+  border-radius: 6px;
+}
